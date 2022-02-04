@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 
 // user schema
 const playerSchema = new mongoose.Schema({
-    playerName: {type:String},
+    playerName: String,
     sevenUp: String,
     sevenDown: String,
     seven: String,
     betAmount: String,
+    wonAmount: Number,
+    result: String,
 })
 const Player = mongoose.model("player", playerSchema);
 

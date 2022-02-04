@@ -41,6 +41,7 @@ gameController.startGame = async (req,res) => {
             gameController.playersResult(player, 0, message)
         }
     })
+    await Player.deleteMany({})
     res.json({diceNumber: totalDiceNumber, playerResults: playerResult})
 } 
 
